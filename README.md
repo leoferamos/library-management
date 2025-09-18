@@ -11,22 +11,6 @@ A modern library management system built with FastAPI and Server-Side Rendering 
 - **Modern UI**: Responsive design with Bootstrap
 - **Server-Side Rendering**: Fast page loads with Jinja2 templates
 
-## Architecture
-
-This project follows a layered architecture pattern:
-
-```
-app/
-├── handlers/      # HTTP request handlers (controllers)
-├── services/      # Business logic layer
-├── repositories/  # Data access layer
-├── models/        # SQLAlchemy database models
-├── schemas/       # Pydantic validation schemas
-├── templates/     # Jinja2 HTML templates
-├── static/        # CSS, JS, and images
-└── core/          # Configuration and database setup
-```
-
 ## 🛠️ Tech Stack
 
 - **Backend**: FastAPI
@@ -48,16 +32,19 @@ app/
 ```
 library-management/
 ├── app/
-│   ├── handlers/          # Route handlers
-│   ├── services/          # Business logic
-│   ├── repositories/      # Data access
-│   ├── models/           # Database models
-│   ├── schemas/          # Pydantic schemas
-│   ├── templates/        # HTML templates
-│   ├── static/           # Static files
-│   ├── core/             # Core configuration
-│   └── main.py           # Application entry point
-├── requirements.txt      # Python dependencies
-├── .env.example         # Environment variables template
+│   ├── handlers/       # HTTP request handlers (controllers)
+│   ├── services/       # Business logic layer
+│   ├── repositories/   # Data access layer
+│   ├── models/         # SQLAlchemy database models
+│   ├── schemas/        # Pydantic validation schemas
+│   ├── templates/      # Jinja2 HTML templates (SSR)
+│   ├── static/         # CSS, JS, and images
+│   ├── core/           # Configuration and database setup
+│   └── main.py         # Application entry point
+├── alembic/            # Database migrations (Alembic)
+├── alembic.ini         # Alembic configuration file
+├── tests/              # Automated tests (pytest)
+├── requirements.txt    # Python dependencies
+├── .env.example        # Environment variables template
 └── README.md           # Project documentation
 ```
