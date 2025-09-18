@@ -3,13 +3,13 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from app.core.config import settings
+from app.handlers.book_handler import router as book_router
 
 # Create FastAPI instance
 app = FastAPI(
     title="Library Management System",
     description="A library management system built with FastAPI and SSR",
-    version="1.0.0",
-    debug=settings.debug
+    version="1.0.0"
 )
 
 # Mount static files
@@ -17,6 +17,9 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 # Setup Jinja2 templates
 templates = Jinja2Templates(directory="app/templates")
+
+# Register routers
+app.include_router(book_router)
 
 
 # Home route with SSR
@@ -35,7 +38,7 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
         "app.main:app",
-        host="0.0.0.0",
+        host="127.0.0.1",
         port=8000,
-        reload=settings.debug
+        reload=True
     )
