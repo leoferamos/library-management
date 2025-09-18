@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-primary text-white p-5 rounded mb-4">
+            <h1 class="display-4">Welcome to Library Management</h1>
+            <p class="lead">Manage your library's books, users, and loans efficiently with our modern system.</p>
+            <hr class="my-4">
+            <p>Get started by registering users, adding books, or managing loans.</p>
+            <a class="btn btn-light btn-lg" href="/register" role="button">Get Started</a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <h5 class="card-title">👥 User Management</h5>
+                <p class="card-text">Register and manage library users with complete profiles and validation.</p>
+                <a href="/users" class="btn btn-primary">Manage Users</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <h5 class="card-title">📚 Book Catalog</h5>
+                <p class="card-text">Add, edit, and organize your library's book collection with ease.</p>
+                <a href="/books" class="btn btn-primary">Manage Books</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <h5 class="card-title">📋 Loan System</h5>
+                <p class="card-text">Track book loans, returns, and manage the lending process.</p>
+                <a href="/loans" class="btn btn-primary">Manage Loans</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="alert alert-info" role="alert">
+            <h4 class="alert-heading">🚀 Quick Start</h4>
+            <p>This is your Library Management System dashboard. From here you can:</p>
+            <ul>
+                <li>Register new users with document validation</li>
+                <li>Add books to your catalog</li>
+                <li>Process book loans and returns</li>
+                <li>View reports and statistics</li>
+            </ul>
+            <hr>
+            <p class="mb-0">Start by creating your first user account!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
