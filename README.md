@@ -46,5 +46,7 @@ library-management/
 ├── tests/              # Automated tests (pytest)
 ├── requirements.txt    # Python dependencies
 ├── .env.example        # Environment variables template
+├── Dockerfile          # Docker build for FastAPI app
+├── docker-compose.yml  # Orchestration for app + Postgres
 └── README.md           # Project documentation
 ```
