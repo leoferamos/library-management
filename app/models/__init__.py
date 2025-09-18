@@ -1,1 +1,1 @@
-# Empty file to make it a Python package
+from .book import Book
